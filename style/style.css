@@ -69,7 +69,7 @@ select {
   outline: none;
   border: 1px solid #BDBDBD;
   background: #FFFCFA;
-  padding: 10px 18px;
+  padding: 20px;
   height: -moz-fit-content;
   height: fit-content;
   -webkit-backdrop-filter: blur(5px);
@@ -92,7 +92,6 @@ select.error {
 }
 
 .btn {
-  align-self: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,11 +99,12 @@ select.error {
   gap: 10px;
   text-align: center;
   padding: 14px 40px;
-  background-color: #4D6F95;
+  background-color: #000000;
   border: 1px solid transparent;
   font-size: var(--fz16);
   font-weight: 700;
   transition: all 0.3s;
+  align-self: start;
   border-radius: 8px;
   cursor: pointer;
   color: #FFFCFA;
@@ -112,7 +112,7 @@ select.error {
 }
 .btn:hover {
   color: #FFFCFA;
-  background-color: #2B4761;
+  background-color: #1E1E1E;
 }
 .btn.white {
   background-color: #FFFCFA;
@@ -175,6 +175,20 @@ ul, ol {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.header .headerBlock .info-block .headerNav.contact li {
+  font-size: var(--fz16);
+  font-weight: 600;
+  transition: 0.5s;
+  position: relative;
+}
+.header .headerBlock .info-block .headerNav.contact li:nth-child(3)::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #0013BB;
+  transform: translate(-100%, 25px);
+}
 .header .headerBlock .info-block .headerNav ul {
   display: flex;
   gap: 40px;
@@ -182,6 +196,18 @@ ul, ol {
 .header .headerBlock .info-block .headerNav ul li {
   font-size: var(--fz16);
   font-weight: 600;
+  transition: 0.5s;
+}
+.header .headerBlock .info-block .headerNav ul li:hover {
+  position: relative;
+}
+.header .headerBlock .info-block .headerNav ul li:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #0013BB;
+  transform: translate(-100%, 25px);
 }
 
 .hero {
@@ -212,6 +238,16 @@ ul, ol {
   font-size: 24px;
 }
 
+.reviewsSection .reviewsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.reviewsSection .reviewsBlock .info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 .reviewsSection .reviewsBlock .info-block .item {
   display: flex;
   gap: 16px;
@@ -235,6 +271,9 @@ ul, ol {
   font-size: var(--fz36);
   font-weight: 600;
 }
+.reviewsSection .reviewsBlock .info-block .item .content .text .desc {
+  font-weight: 600;
+}
 .reviewsSection .reviewsBlock .info-block .item .content .arrow {
   width: 30px;
 }
@@ -244,56 +283,194 @@ ul, ol {
      object-fit: contain;
 }
 
-.footeer {
-  background-color: #4D6F95;
-  color: #FFFCFA;
-  padding: 60px 0px;
+.lastNewsSection .lastNewsBlock ._title {
+  margin-bottom: 32px;
 }
-.footeer .footerBlock .info-block {
+.lastNewsSection .lastNewsBlock .swiper .swiper-wrapper {
   display: flex;
-  justify-content: space-between;
 }
-.footeer .footerBlock .info-block .name {
-  font-size: var(--fz36);
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.footeer .footerBlock .info-block .content {
-  display: flex;
-  gap: 100px;
-}
-.footeer .footerBlock .info-block .content .footerNav ul {
-  display: flex;
-  gap: 60px;
-}
-.footeer .footerBlock .info-block .content .footerNav ul li a {
-  font-size: var(--fz16);
-  font-weight: 700;
-  color: #FFFCFA;
-  text-transform: uppercase;
-}
-.footeer .footerBlock .info-block .content .contacts {
+.lastNewsSection .lastNewsBlock .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  padding: 20px;
+  gap: 10px;
+  border: 1px solid #000000;
+  border-radius: 20px;
 }
-.footeer .footerBlock .info-block .content .contacts > .name {
-  font-size: 18px;
+.lastNewsSection .lastNewsBlock .swiper .swiper-wrapper .swiper-slide .img {
+  width: 350px;
+  height: 250px;
 }
-.footeer .footerBlock .info-block .content .contacts a {
-  font-size: var(--fz16);
-  font-weight: 500;
+.lastNewsSection .lastNewsBlock .swiper .swiper-wrapper .swiper-slide .img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.lastNewsSection .lastNewsBlock .swiper .swiper-wrapper .swiper-slide .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.lastNewsSection .lastNewsBlock .swiper .swiper-wrapper .swiper-slide .content .title {
+  font-size: var(--fz28);
+  font-weight: 700;
+}
+.lastNewsSection .lastNewsBlock .swiper .swiper-wrapper .swiper-slide .content .desc {
+  font-weight: 600;
+}
+.lastNewsSection .lastNewsBlock .swiper .swiper-wrapper .swiper-slide .content .btn {
+  align-self: start;
+  width: 220px;
+}
+
+.footer {
+  background-color: #000000;
+}
+.footer .footerBlock {
+  padding: 24px 0;
+}
+.footer .footerBlock .info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .footerBlock .info-block .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #FFFCFA;
-  font-variant-numeric: lining-nums proportional-nums;
+  opacity: 0.5;
 }
-.footeer .footerBlock .info-block .content .contacts .media-social ul {
+.footer .footerBlock .info-block .text a {
+  color: #FFFCFA;
+}
+.footer .footerBlock .info-block .logo {
+  width: 106px;
+}
+.footer .footerBlock .info-block .logo img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.articleSection {
+  margin-top: 120px;
+}
+.articleSection .articleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.articleSection .articleBlock .info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+}
+.articleSection .articleBlock .info-block p {
+  font-size: var(--fz24);
+  font-weight: 600;
+}
+.articleSection .articleBlock .info-block .img {
+  width: 1300px;
+}
+.articleSection .articleBlock .info-block .img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.commentSection .commentBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.commentSection .commentBlock .info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.commentSection .commentBlock .info-block .item {
   display: flex;
   gap: 16px;
 }
-.footeer .footerBlock .info-block .content .contacts .media-social ul li {
-  width: 28px;
+.commentSection .commentBlock .info-block .item .img {
+  width: 100px;
+  height: 100px;
 }
-.footeer .footerBlock .info-block .content .contacts .media-social ul li img {
+.commentSection .commentBlock .info-block .item .img img {
+  width: 100%;
+  border-radius: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.commentSection .commentBlock .info-block .item .content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.commentSection .commentBlock .info-block .item .content .text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.commentSection .commentBlock .info-block .item .content .text .title {
+  font-size: var(--fz28);
+  font-weight: 600;
+}
+.commentSection .commentBlock .info-block .item .content .text .desc {
+  font-weight: 600;
+}
+
+.contactSection .contactBlock {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.contactSection .contactBlock .info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contactSection .contactBlock .info-block .item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.contactSection .contactBlock .info-block .item .img {
+  width: 100px;
+}
+.contactSection .contactBlock .info-block .item .img img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.contactSection .contactBlock .info-block .item .text {
+  font-size: var(--fz36);
+  font-weight: 600;
+}
+
+#infoModal .modal-content .modal-header {
+  display: flex;
+}
+#infoModal .modal-content .modal-header .h1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#infoModal .modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+}
+#infoModal .modal-content .modal-body input {
+  margin-bottom: 16px;
+}
+#infoModal .modal-content .modal-body .btn-block {
+  margin-bottom: 8px;
+}
+#infoModal .modal-content .modal-body .btn-block .btn {
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

@@ -13,13 +13,15 @@ $("body").on('click', '[href*="#"]', function (e) {
 	}, 1000);
 	e.preventDefault();
 });
-
-new Swiper(".mainSlider", {
+var swiper = new Swiper(".lastNewsSwiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-});
+    slidesPerView: 3,
+    spaceBetween: 230,
+    loop:true,
+  });
 
 $(document).on('click', '.checkField', function (el) {
   el.preventDefault();
@@ -247,16 +249,16 @@ function infoOpenModal(elem) {
     bodyText.html('')
     if (type == 'type-1') {
         titleText.html(`
-            <div class="h1 _title36 modal-title" id="exampleModalLabel">Заказать обратный звонок</div>
+            <div class="h1 _title36 modal-title" id="exampleModalLabel">Подписаться</div>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         `)
         bodyText.html(`
             <form class="application-block">
-                <input type="phone" class="mask-phone" placeholder="Номер телефона" name="phone">
-                <div class="desc">Нажимая кнопку “Отправить” вы даете согласие на обработку персональных данных</div>
+                <input type="email" class="mask-email" placeholder="Email@.com" name="phone">
                 <div class="btn-block">
                     <div class="btn btnBlack checkField" data-create="feedback_request" data-request="success-modal">Отправить</div>
                 </div>
+                <div class="desc">Нажимая кнопку “Отправить” вы даете согласие на обработку персональных данных</div>
             </form>
         `)
     }
