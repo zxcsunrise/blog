@@ -46,7 +46,7 @@ body {
     color: $dark;
     font-family: $font;
     box-sizing: border-box;
-    font-size: var(--fz14);
+    font-size: var(--fz16);
     font-weight: 400;
 }
 a,
@@ -179,15 +179,97 @@ ul, ol {
 // Header
 
 .header {
-    
+    padding: 16px 0;
     .headerBlock {
         .info-block {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             .logo {
-
+                width: 106px;
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
             }
             .headerNav {
+                ul {
+                    display: flex;
+                    gap: 40px;
+                    li {
+                        font-size: var(--fz16);
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+.hero {
+    background-image: url("../img/bgnew.jpg");
+    background-size: cover;
 
+    background-repeat: no-repeat;
+    .heroBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 172px 0;
+        margin-bottom: 120px;
+        .text {
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .title {
+                font-size: 36px;
+                text-align: center;
+                font-weight: 600;
+            }
+            .desc {
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.reviewsSection {
+    .reviewsBlock {
+        .info-block {
+            .item {
+                display: flex;
+                gap: 16px;
+                .img {
+                    width: 100px;
+                    height: 100px;
+                    img {
+                        width: 100%;
+                        border-radius: 20px;
+                        object-fit: cover;
+                    }
+                }
+                .content {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    .text {
+                        .title {
+                            font-size: var(--fz36);
+                            font-weight: 600;
+                        }
+                        .desc {
+
+                        }
+                    }
+                    .arrow {
+                        width: 30px;
+                        img {
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
             }
         }
     }
@@ -294,320 +376,4 @@ ul, ol {
 // Стили закончены
 
 // Адаптив начало
-@media screen and (max-width: 1440px){
-    :root {
-        --container: 1240px;
-        --fz64: 40px;
-        --fz48: 48px;
-        --fz36: 36px;
-        --fz28: 28px;
-        --fz24: 24px;
-        --fz18: 18px;
-        --fz16: 16px;
-        --fz14: 14px;
-        --fz8: 8px;
-    }
-    .heroBlock {
-        .info-block {
-            .img {
-                width: 400px;
-            }
-        }
-    }
-    .stagesSection {
-        .stagesBlock {
-            .info-block {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
-            }
-        }
-    }
-    .costSection {
-        .costBlock {
-            .info-block {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-            }
-        }
-    
-    }
-    .footer {
-        .footerBlock {
-            .info-block {
-                flex-wrap: wrap;
-                .content {
-                    gap: 40px;
-                    .footerNav {
-                        ul {
-                            gap: 20px;
-                            flex-direction: column;
-                        }
-                        
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width: 900px){
-    :root {
-        --container: 780px;
-        --fz64: 40px;
-        --fz48: 48px;
-        --fz36: 36px;
-        --fz28: 28px;
-        --fz24: 24px;
-        --fz18: 18px;
-        --fz16: 16px;
-        --fz14: 14px;
-        --fz8: 8px;
-    }
-    .header {
-        .headerBlock {
-            .info-block {
-                gap: 190px;
-                .headerNav {
-                    display: none;
-                }
-                .burger {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    div {
-                        width: 30px;
-                        height: 3px;
-                        background-color: $lblue;
-                        border-radius: 50px;
-                        &::before {
-                            content: "";
-                            top: 0;
-                            left: 0;
-                            width: 20px;
-                            height: 2px;
-                            background-color: $lblue;
-                        }
-                    }
-                   
-                } 
-            }
-           
-        }
-    }
-    .heroBlock {
-        .info-block {
-            flex-direction: column;
-            align-items: normal;
-            .img {
-                width: 720px;
-            }
-        }
-    }
-    .mainNav {
-        .mainNavBlock {
-            nav {
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-        }
-    }
-    .aboutMeSection {
-        .aboutMeBlock {
-            .info-block {
-                display: flex;
-                flex-direction: column;
-                gap: 40px;
-                .text {
-                    order: 2;
-                }
-                .img {
-                    order: 1;
-                }
-            }
-        }
-    }
-    .portfolioSection {
-        .portfolioBlock {
-            .info-block {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-                .item {
-                    .img {
-                        width: 300px;  
-                      }
-                      .content {
-                        gap: 28px;
-                      }
-                }
-               
-            }
-        }
-    }
-    .stagesSection {
-        .stagesBlock {
-            .info-block {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
-            }
-        }
-    }
-    .costSection {
-        .costBlock {
-            .info-block {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(220px, 3fr));
-                gap: 20px;
-            }
-            .costBlockAdd {
-                ul {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(220px, 3fr));
-                    gap: 40px;
-                }
-               
-            }
-        }
-    
-    }
-    .footer {
-        .footerBlock {
-            .info-block {
-                flex-wrap: wrap;
-                .content {
-                    gap: 40px;
-                    .footerNav {
-                        ul {
-                            gap: 20px;
-                            flex-direction: column;
-                        }
-                        
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 390px){
-    :root {
-        --container: 350px;
-        --fz64: 36px;
-    }
-    .heroBlock {
-        .info-block {
-            flex-direction: column;
-            align-items: normal;
-            gap: 36px;
-            .img {
-                width: 335px;
-                &::after {
-                    top: 20px;
-                    left: 20px;
-                }
-            }
-        }
-    }
-    .mainNav {
-        .mainNavBlock {
-            nav {
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-        }
-    }
-    .aboutMeSection {
-        .aboutMeBlock {
-            .info-block {
-                display: flex;
-                flex-direction: column;
-                gap: 40px;
-                .text {
-                    order: 2;
-                }
-                .img {
-                    order: 1;
-                }
-            }
-        }
-    }
-    .portfolioSection {
-        .portfolioBlock {
-            .info-block {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                .item {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-                    align-items: normal;
-                    .img {
-                        width: 300px;  
-                      }
-                      .content {
-                        gap: 28px;
-                      }
-                }
-               
-            }
-        }
-    }
-    .stagesSection {
-        .stagesBlock {
-            .info-block {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
-            }
-        }
-    }
-    .costSection {
-        .costBlock {
-            .info-block {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(220px, 3fr));
-                gap: 20px;
-            }
-            .costBlockAdd {
-                ul {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
-                    gap: 40px;
-                }
-               
-            }
-        }
-    
-    }
-    .footer {
-        .footerBlock {
-            .info-block {
-                flex-wrap: wrap;
-                gap: 20px;
-                align-items: center;
-                .content {
-                    gap: 40px;
-                    .footerNav {
-                        ul {
-                            gap: 20px;
-                            flex-direction: column;
-                        }
-                        
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 320px) {
-
-    .footer {
-        .footerBlock {
-            .info-block {
-                .content {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
-                }
-            }
-        }
-    }
-}
 
