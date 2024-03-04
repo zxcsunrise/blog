@@ -8,7 +8,7 @@ $accent: #0013BB;
 $green: #219653;
 $red: #EB5757;
 $gray: #BDBDBD;
-$font:'Raleway', sans-serif;
+$font:'Inter', sans-serif;
 
 @mixin bg_s {
     background-size: cover;
@@ -119,7 +119,7 @@ select {
     align-items: center;
     gap: 10px;
     text-align: center;
-    padding: 14px 40px;
+    padding: 20px 32px;
     background-color: $black;
     border: 1px solid transparent;
     font-size: var(--fz16);

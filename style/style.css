@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   color: #1E1E1E;
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", sans-serif;
   box-sizing: border-box;
   font-size: var(--fz16);
   font-weight: 400;
@@ -98,7 +98,7 @@ select.error {
   align-items: center;
   gap: 10px;
   text-align: center;
-  padding: 14px 40px;
+  padding: 20px 32px;
   background-color: #000000;
   border: 1px solid transparent;
   font-size: var(--fz16);
