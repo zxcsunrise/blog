@@ -238,10 +238,11 @@ function checkSize() {
 
 $(document).on('click', '.open-modal', function (el) {
     el.preventDefault()
-    infoOpenModal(el)
+    infoOpenModal1(el)
+    infoOpenModal2(el)
 })
 
-function infoOpenModal(elem) {
+function infoOpenModal1(elem) {
     let type = $(elem.target).attr('data-type-modal'),
         titleText = $('.modal#infoModal .modal-header'),
         bodyText = $('.modal#infoModal .modal-body')

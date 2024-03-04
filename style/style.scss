@@ -508,6 +508,12 @@ ul, ol {
                 margin-bottom: 8px;
                 
             }
+            .modalList {
+                display: flex;
+                li {
+                    font-size: var(--fz24);
+                }
+            }
         }
     }
 }

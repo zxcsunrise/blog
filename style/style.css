@@ -473,4 +473,10 @@ ul, ol {
 }
 #infoModal .modal-content .modal-body .btn-block .btn {
   border-radius: 10px;
+}
+#infoModal .modal-content .modal-body .modalList {
+  display: flex;
+}
+#infoModal .modal-content .modal-body .modalList li {
+  font-size: var(--fz24);
 }/*# sourceMappingURL=style.css.map */
